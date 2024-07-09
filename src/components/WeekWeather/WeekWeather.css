@@ -1,0 +1,33 @@
+.forecastFive{
+    border-right: 1px solid gray;
+        position: relative;
+        transition: background-color 0.3s;
+}
+.forecastFive:hover{
+    border-bottom: 2px solid green;
+    background-color: rgb(226, 226, 226);
+}
+.forecastFive:last-child{
+    border-right: none;
+
+}
+.container{
+    padding: 0;
+}
+
+.forecastFive::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.isActive{
+    border-bottom: 2px solid green;
+}
+.weekContainer{
+    min-height: 320px;
+}

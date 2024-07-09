@@ -1,0 +1,29 @@
+.nav-item {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: width 0.3s;
+    box-sizing: border-box;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.activeTab {
+    border-bottom: 3px solid white;
+}
+
+.main{
+    text-shadow: black 1px 0 10px;
+    font-weight: 650;
+}

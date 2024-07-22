@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
 import './HourlyWeather.css'
 
 export const HourlyWeather = ({ HourlyItem, weatherData, date, degToDirection, getHour, dateFormat }) => {
 
-    useEffect(() => {}, [date])
 
     if (!weatherData) return null
 

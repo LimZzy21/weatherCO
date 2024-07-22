@@ -1,12 +1,19 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { onChangeSearchStr, fetchBySearch } from '../../redux/dataSlice'
 import './header.css'
-export const Header = ({ onChangeTab, tab, onHandleChangeSearch, onHandleSearch })=>{
+
+
+export const Header = ({ onChangeTab, tab})=>{
+
+    const dispatch = useDispatch()
+    const searchStr = useSelector(state=>state.data.searchStr)
     return (
         <div className="container-fluid ">
             <div className="row justify-content-center">
                 <h1 className="col-lg-8 mb-0 text-white main">WeatherCO</h1>
                 <div className=" col-lg-4 w-25 input-group mt-3 mb-3 ">
-                    <input type="text" onChange={e => onHandleChangeSearch(e)} className="form-control" placeholder="enter a city" aria-label="Username" aria-describedby="basic-addon1"/>
-                    <button type="button" onClick={onHandleSearch} className="btn btn-primary">Search</button>
+                    <input type="text" onChange={(e)=>dispatch(onChangeSearchStr(e.target.value))} className="form-control" placeholder="enter a city" aria-label="Username" aria-describedby="basic-addon1"/>
+                    <button type="button" onClick={() => dispatch(fetchBySearch(searchStr))} className="btn btn-primary">Search</button>
                 </div>
                 <div className="row bg-secondary text-white text-center">
                     <div onClick={(e) => onChangeTab(e, 0)} className={`col-lg-1 col-sm border-end nav-item ${tab === 0 ? 'activeTab' : ''}`}><h3>Today</h3></div>

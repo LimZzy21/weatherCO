@@ -35,7 +35,6 @@ export const fetchLocationAndWeather = createAsyncThunk('data/fetchLocationAndWe
             coords: { latitude: place.lat, longitude: place.lon },
         }));
 
-
         const weatherData = res.data
         const weatherWeekData = resWeek.data
 

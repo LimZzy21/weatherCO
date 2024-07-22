@@ -13,7 +13,10 @@
     "geolib": "^3.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
     "react-redux": "^9.1.2",
+=======
+>>>>>>> d71a1dec249e43fcaf8916613cf6783c523b57ca
     "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

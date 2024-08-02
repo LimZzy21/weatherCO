@@ -1,8 +1,8 @@
-##React WeatherCO app 
-##Used npm packages
+## React WeatherCO app 
+## Used npm packages
 axios, bootstrap, dateformat, geolib
 
-##Get started
+## Get started
 
 `npm instal` for install packages 
 
